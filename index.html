@@ -1,0 +1,42 @@
+define(['pipAPI', 'https://pjhwann.github.io/control/'], function(APIConstructor, epExtension){
+	var API = new APIConstructor();
+	var global = API.getGlobal();
+	return epExtension(
+	{
+			//The prime categories.
+			primeCats :  [
+				{
+					name : 'Humilityone', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    				    {word : 'Humidity'}, 
+    					{word : 'Moisture'}, 
+    					{word : 'Vapor'}, 
+    					{word : 'Dew'}, 
+    					{word : 'Drizzle'}
+				    ]
+				}, 
+				{
+					name : 'humility two', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    					{word : 'Mist'}, 
+    					{word : 'Rainfall'}, 
+    					{word : 'Water'}, 
+    					{word : 'Fog'}, 
+    					{word : 'Steam'}
+    				]
+				}
+			],	
+
+			nTrialsPerPrimeTargetPair:2, //How many trials in a block, per prime-target combination (always three blocks).
+			fixationDuration : 500, 
+			errorFBDuration : 1500, 
+			ITIDuration : 500,
+
+			//Set the image folder here.
+			base_url : {
+				image : "https://baranan.github.io/minno-tasks/images/"
+			}
+	});
+});
